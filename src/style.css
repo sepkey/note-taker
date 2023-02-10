@@ -28,18 +28,22 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .content {
   border: 1px solid #ccc;
   flex-grow: 1;
   height: 70vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
   column-gap: 2.4rem;
   row-gap: 2.4rem;
   padding: 2.4rem;
+  overflow-y: auto;
 }
 
+/***************Boxes***************/
 .note-piece {
   border: 1px dashed #3f3f41;
   padding: 1.2rem;
@@ -48,10 +52,7 @@ body {
   height: 10rem;
   overflow: hidden;
 }
-/* .note-piece:hover {
-  height: max-content;
-  overflow: visible;
-} */
+
 .paper-stack,
 .paper-stack:before,
 .paper-stack:after {
@@ -89,6 +90,12 @@ body {
   top: 3px;
 }
 
+.colors {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+/***************Inputs***************/
 .search-box {
   width: calc(100vw - 30rem - 4.8rem - 6.4rem - 6.4rem - 2.4rem - 2.4rem);
   line-height: 1;
@@ -112,22 +119,7 @@ textarea {
   font-family: inherit;
 }
 
-/* scrollbar */
-textarea::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px #ccc;
-}
-
-textarea::-webkit-scrollbar {
-  width: 0.6rem;
-  background-color: #e6fa9d;
-}
-
-textarea::-webkit-scrollbar-thumb {
-  background-color: #3f3f41;
-}
-
-/*buttons*/
-
+/***************Buttons***************/
 .btn-add {
   border: 1px solid transparent;
   background-color: #e8eb2e;
@@ -138,12 +130,6 @@ textarea::-webkit-scrollbar-thumb {
 }
 .btn-add:hover {
   border: 1px solid #3f3f41;
-}
-
-.colors {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .btn-color {
@@ -160,6 +146,21 @@ textarea::-webkit-scrollbar-thumb {
   box-shadow: 0px 0px 3px 1px rgb(0, 0, 0, 0.25);
 }
 
+/***************Scrollbar***************/
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #ccc;
+}
+
+*::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: #e6fa9d;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3f3f41;
+}
+
+/***************Animations***************/
 @keyframes slide-down {
   0% {
     transform: translateX(-50rem) scale(0);
@@ -168,3 +169,5 @@ textarea::-webkit-scrollbar-thumb {
     transform: translateX(0) scale(1);
   }
 }
+
+/*************************************/

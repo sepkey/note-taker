@@ -7,17 +7,17 @@ const Content = () => {
   const searchQuery = useSelector((state) => state.searchQuery);
   let filteredItems = [...items];
 
-  // if (searchQuery) {
-  //   filteredItems = filteredItems.filter(
-  //     (item) => item.note.toLowerCase().indexOf(searchQuery) > -1
-  //   );
-  // }
-
   if (searchQuery) {
-    filteredItems = filteredItems.filter((item) =>
-      item.note.toLowerCase().includes(searchQuery.toLowerCase())
+    filteredItems = filteredItems.filter(
+      (item) => item.note.toLowerCase().indexOf(searchQuery) > -1
     );
   }
+
+  // if (searchQuery) {
+  //   filteredItems = filteredItems.filter((item) =>
+  //     item.note.toLowerCase().includes(searchQuery.toLowerCase())
+  //   );
+  // }
 
   return (
     <main className="content">
