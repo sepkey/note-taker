@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+
+html {
+  /* overflow-x: hidden; */
+  font-size: 62.5%;
+}
+
+body {
+  /* background-color: #27272a; */
+  padding: 4.8rem 6.4rem 0;
+}
+
+#root {
+  max-width: 150rem;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 4.8rem;
+  border: 1px solid #ccc;
+  padding: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  border: 1px solid #ccc;
+  flex-grow: 1;
+  height: 70vh;
+}
+.paper-stack,
+.paper-stack:before,
+.paper-stack:after {
+  background-color: #fdfdf6;
+  border: 1px solid #ccc;
+}
+
+.paper-stack {
+  position: relative;
+  width: 30rem;
+  padding: 2rem;
+  align-self: start;
+}
+.paper-stack:before,
+.paper-stack:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateZ(1deg);
+  -o-transform: rotate(1deg);
+  transform: rotateZ(1deg);
+  z-index: -1;
+  left: 10px;
+  top: 7px;
+}
+
+.paper-stack:after {
+  -webkit-transform: rotateZ(0.5deg);
+  -o-transform: rotate(0.5deg);
+  transform: rotateZ(5deg);
+  left: 5px;
+  top: 3px;
+}
+
+/* .paper-stack p {
+  margin: 1.5em 0;
+  font-size: 1.6rem;
+  overflow-y: auto;
+  height: 12rem;
+} */
+
+.colors {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.pen-color {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50px;
+}
+
+.search-box {
+  width: calc(100vw - 30rem - 4.8rem - 6.4rem - 6.4rem - 2.4rem - 2.4rem);
+  line-height: 1;
+  padding: 0.8rem;
+  border: 1px dashed #3f3f41;
+}
+
+textarea {
+  resize: none;
+  background-color: transparent;
+  border: none;
+  overflow-y: auto;
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  height: 15rem;
+  width: 100%;
+  font-family: inherit;
+}
+
+/* scrollbar */
+textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #ccc;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: #e6fa9d;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #3f3f41;
+}
