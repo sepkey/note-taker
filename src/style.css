@@ -24,9 +24,18 @@ body {
 .header {
   margin-bottom: 4.8rem;
   border: 1px solid #ccc;
-  padding: 2.4rem;
+  padding: 1.2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.header img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50px;
+  border-right: 1px solid #3f3f41;
+  border-bottom: 3px solid #e8eb2e;
+  border-left: 3px solid #e8eb2e;
 }
 
 .content {
@@ -51,6 +60,7 @@ body {
   animation: slide-down ease 0.3s;
   height: 10rem;
   overflow: hidden;
+  position: relative;
 }
 
 .paper-stack,
@@ -146,6 +156,24 @@ textarea {
   box-shadow: 0px 0px 3px 1px rgb(0, 0, 0, 0.25);
 }
 
+.btn-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-out;
+  border-radius: 4px;
+  /* padding: 0.1rem; */
+}
+.btn-close:hover {
+  background-color: #3f3f41;
+  color: #fdfdf6;
+}
 /***************Scrollbar***************/
 *::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px #ccc;

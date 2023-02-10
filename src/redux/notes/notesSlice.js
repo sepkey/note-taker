@@ -13,8 +13,11 @@ export const notesSlice = createSlice({
     setSearchQuery(state, action) {
       state.searchQuery = action.payload;
     },
+    removeNote(state, action) {
+      state.items = state.items.filter((i) => i.id !== action.payload);
+    },
   },
 });
 // export const notesActiond = notesSlice.actions; //former approach
-export const { addNotes, setSearchQuery } = notesSlice.actions; //new approach
+export const { addNotes, setSearchQuery, removeNote } = notesSlice.actions; //new approach
 export default notesSlice.reducer;
