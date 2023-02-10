@@ -15,6 +15,6 @@ export const notesSlice = createSlice({
     },
   },
 });
-
-export const { addNotes, setSearchQuery } = notesSlice.actions;
+// export const notesActiond = notesSlice.actions; //former approach
+export const { addNotes, setSearchQuery } = notesSlice.actions; //new approach
 export default notesSlice.reducer;
