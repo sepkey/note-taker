@@ -24,7 +24,7 @@ body {
 .header {
   margin-bottom: 4.8rem;
   border: 1px solid #ccc;
-  padding: 1.2rem;
+  padding: 1.2rem 2.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +54,8 @@ body {
 
 /***************Boxes***************/
 .note-piece {
-  border: 1px dashed #3f3f41;
+  /* border: 1px dashed #3f3f41; */
+  box-shadow: 0 2px 3px 1px rgb(63, 63, 65, 0.25);
   padding: 1.2rem;
   font-size: 1.4rem;
   animation: slide-down ease 0.3s;
@@ -115,6 +116,14 @@ body {
 }
 .search-box:focus {
   border: 1px solid #3f3f41;
+}
+
+.filter {
+  line-height: 1;
+  padding: 0.8rem 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 0.5rem;
 }
 
 textarea {

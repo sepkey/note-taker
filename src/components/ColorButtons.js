@@ -13,6 +13,7 @@ const ColorButtons = ({ bgColor, setBgColor }) => {
   const handleClick = function (e) {
     setBgColor(e.target.value);
   };
+
   return (
     <div className="colors">
       {colors.map((c, idx) => (

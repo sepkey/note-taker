@@ -5,6 +5,7 @@ export const notesSlice = createSlice({
   initialState: {
     items: [],
     searchQuery: "",
+    selectedColor: "",
   },
   reducers: {
     addNotes(state, action) {
@@ -16,8 +17,12 @@ export const notesSlice = createSlice({
     removeNote(state, action) {
       state.items = state.items.filter((i) => i.id !== action.payload);
     },
+    setSelectedColor(state, action) {
+      state.selectedColor = action.payload;
+    },
   },
 });
 // export const notesActiond = notesSlice.actions; //former approach
-export const { addNotes, setSearchQuery, removeNote } = notesSlice.actions; //new approach
+export const { addNotes, setSearchQuery, removeNote, setSelectedColor } =
+  notesSlice.actions; //new approach
 export default notesSlice.reducer;
