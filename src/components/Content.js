@@ -22,7 +22,6 @@ const Content = () => {
 
   if (selectedColor) {
     filteredItems = filteredItems.filter((item) => {
-      console.log(item);
       return item.bgColor.toLowerCase().includes(selectedColor);
     });
   }

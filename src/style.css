@@ -126,6 +126,16 @@ body {
   margin-right: 0.5rem;
 }
 
+/* select option:checked:after {
+  content: attr(title);
+  background: #666;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border: none;
+} */
+
 textarea {
   resize: none;
   background-color: transparent;

@@ -9,12 +9,12 @@ const Search = () => {
   const selectedColor = useSelector((state) => state.selectedColor);
   // console.log("-------", selectedColor);
   const colors = [
-    "#FFFDDE",
-    "#D9D7F1",
+    "#fffdde",
+    "#d9d7f1",
     "#e6fa9d",
-    "#FFCBCB",
-    "#DEEDF0",
-    "#FFDCA9",
+    "#ffcbcb",
+    "#deedf0",
+    "#ffdca9",
   ];
 
   const handleChange = (e) => {
@@ -25,14 +25,18 @@ const Search = () => {
     <div>
       <select
         name="filter"
+        title="filter"
         className="filter"
         onChange={(e) => dispatch(setSelectedColor(e.target.value))}
         value={selectedColor}
+        style={{
+          backgroundColor: selectedColor,
+        }}
       >
-        <option value="">Filter</option>
+        <option value="" style={{ backgroundColor: "#fff" }}></option>
         {colors.map((c, idx) => (
           <option value={c} key={idx} style={{ backgroundColor: c }}>
-            {c}
+            {/* {c} */}
           </option>
         ))}
       </select>
