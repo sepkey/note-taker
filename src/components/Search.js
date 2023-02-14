@@ -7,7 +7,6 @@ const Search = () => {
   const dispatch = useDispatch();
   const searchQuery = useSelector((state) => state.searchQuery);
   const selectedColor = useSelector((state) => state.selectedColor);
-  // console.log("-------", selectedColor);
   const colors = [
     "#fffdde",
     "#d9d7f1",

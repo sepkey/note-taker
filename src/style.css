@@ -54,7 +54,6 @@ body {
 
 /***************Boxes***************/
 .note-piece {
-  /* border: 1px dashed #3f3f41; */
   box-shadow: 0 2px 3px 1px rgb(63, 63, 65, 0.25);
   padding: 1.2rem;
   font-size: 1.4rem;
@@ -106,6 +105,14 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
+
+.operation-btns {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+}
+
 /***************Inputs***************/
 .search-box {
   width: calc(100vw - 30rem - 4.8rem - 6.4rem - 6.4rem - 2.4rem - 2.4rem);
@@ -176,9 +183,6 @@ textarea {
 }
 
 .btn-close {
-  position: absolute;
-  top: 5px;
-  right: 5px;
   background-color: transparent;
   border: none;
   cursor: pointer;
