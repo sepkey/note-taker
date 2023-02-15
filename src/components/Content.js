@@ -29,7 +29,7 @@ const Content = () => {
   return (
     <main className="content">
       {filteredItems.length > 0
-        ? filteredItems.map((note) => <NotePiece key={note.id} note={note} />)
+        ? filteredItems.map((item) => <NotePiece key={item.id} item={item} />)
         : "nothing to show"}
     </main>
   );

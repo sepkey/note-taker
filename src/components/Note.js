@@ -31,8 +31,9 @@ const Note = () => {
   return (
     <div className="paper-stack">
       <textarea
-        value={text}
+        className="paper-content"
         placeholder="Enter your note..."
+        value={text}
         onChange={(e) => {
           setText(e.target.value);
           dispatch(setSearchQuery(""));
