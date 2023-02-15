@@ -35,6 +35,7 @@ const NotePiece = ({ item }) => {
           className="note-editable"
           value={editTxt}
           onChange={(e) => setEditTxt(e.target.value)}
+          onBlur={handleEdit}
         ></textarea>
       ) : (
         <p className="note-content" onDoubleClick={handleToggle}>
