@@ -164,6 +164,7 @@ textarea {
 .note-editable {
   height: 9rem;
   margin-top: 1.2rem;
+  width: 100%;
 }
 /***************Buttons***************/
 .btn-add {

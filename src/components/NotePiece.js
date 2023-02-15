@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { removeNote } from "../redux/notes/notesSlice";
-import { editNote } from "../redux/notes/notesSlice";
+import { removeNote, editNote } from "../redux/notes/notesSlice";
 import { IoMdClose } from "react-icons/io";
 import { VscEdit } from "react-icons/vsc";
 
@@ -9,28 +8,25 @@ const NotePiece = ({ item }) => {
   const dispatch = useDispatch();
   const [openEdit, setOpenEdit] = useState(false);
   const [editTxt, setEditTxt] = useState(item.note);
-  console.log(item);
 
-  const handleEdit = function () {
+  const handleEdit = () => {
     dispatch(editNote({ ...item, note: editTxt }));
     setOpenEdit(false);
   };
+
+  const handleDelete = () => dispatch(removeNote(item.id));
+
+  const handleToggle = () => setOpenEdit(!openEdit);
+
   return (
-    <div
-      className="note-piece"
-      style={{ backgroundColor: item.bgColor }}
-      onClick={(e) => console.log("log0---", e)}
-    >
+    <div className="note-piece" style={{ backgroundColor: item.bgColor }}>
       <div className="operation-btns">
         {openEdit && (
           <button onClick={handleEdit} className="operation-btn">
             <VscEdit size={16} />
           </button>
         )}
-        <button
-          onClick={() => dispatch(removeNote(item.id))}
-          className="operation-btn"
-        >
+        <button onClick={handleDelete} className="operation-btn">
           <IoMdClose size={16} />
         </button>
       </div>
@@ -38,12 +34,10 @@ const NotePiece = ({ item }) => {
         <textarea
           className="note-editable"
           value={editTxt}
-          onChange={(e) => {
-            setEditTxt(e.target.value);
-          }}
+          onChange={(e) => setEditTxt(e.target.value)}
         ></textarea>
       ) : (
-        <p className="note-content" onDoubleClick={setOpenEdit}>
+        <p className="note-content" onDoubleClick={handleToggle}>
           {item.note}
         </p>
       )}
